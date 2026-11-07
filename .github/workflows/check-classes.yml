@@ -17,9 +17,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
           cache: pip
@@ -28,7 +28,7 @@ jobs:
 
       # remember which sections we've already notified about between runs
       - name: Restore notification state
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@v6
         with:
           path: notified.json
           key: notified-${{ github.run_id }}
@@ -40,7 +40,7 @@ jobs:
         run: python main.py --once
 
       - name: Save notification state
-        uses: actions/cache/save@v4
+        uses: actions/cache/save@v6
         with:
           path: notified.json
           key: notified-${{ github.run_id }}
