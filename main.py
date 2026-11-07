@@ -46,7 +46,8 @@ REGISTER_URL = "https://apps.uillinois.edu/selfservice"
 
 PAGE_URL = "https://courses.illinois.edu/schedule/{year}/{season}/{subject}/{number}"
 XML_URL = "https://courses.illinois.edu/cisapp/explorer/schedule/{year}/{season}/{subject}/{number}.xml"
-HEADERS = {"User-Agent": "Mozilla/5.0"}
+# Identify this as a small class-alert bot (not a browser) so site admins can see what it is
+HEADERS = {"User-Agent": "uiuc-class-checker/1.0 (+https://github.com/sltran3/uiuc-class-checker)"}
 
 _course_titles = {}
 
