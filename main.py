@@ -170,14 +170,12 @@ season = "spring"  # "spring", "fall", "summer" or "winter"
 # double and triple check that the CRN is correct
 # enter the the courses in this format ("SUBJECT NUMBER", CRN)
 # EX: courses_you_want  = [("CS 233",63735), ("CS 233", 63733), ("CS 361", 66305)]
-courses_you_want = [("ADV 360", 75532), ("ADV 360", 75533),("BADM 320", 55843), ("PLPA 200", 37737)]
+courses_you_want = [("ADV 360", 75532), ("ADV 360", 75533), ("PLPA 200", 37737)]
 
 # Restrictions that block you from a section. For these CRNs you're only notified
 # once the section is open AND this text is gone from its Course Explorer listing.
-# (BADM 320 online says it opens to all of campus Mon Nov 23, 2026 ~10:00 a.m.)
-blocking_restrictions = {
-    55843: "Restricted to Gies College of Business",
-}
+# EX: blocking_restrictions = {55843: "Restricted to Gies College of Business"}
+blocking_restrictions = {}
 
 # --once mode remembers which sections it already notified you about in this file,
 # so you get one alert when a section opens instead of one every check.
